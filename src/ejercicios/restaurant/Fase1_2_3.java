@@ -53,7 +53,7 @@ public class Fase1_2_3 {
 
         //Calculate the note
 
-        for (int i=0; totalPrice>0 && i<money.length; i++) {
+        for (int i=money.length-1; totalPrice>0 && i>=0; i--) {
             int cont = 0;
             while (money[i] <= totalPrice) {
                 totalPrice -= money[i];
