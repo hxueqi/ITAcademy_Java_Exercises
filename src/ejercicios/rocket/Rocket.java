@@ -40,12 +40,5 @@ public class Rocket {
         Thruster t = this.thrusters.get(thrusterIndex);
         t.setTargetPower(targetPower);
     }
-
-    /*public void printEveryThrusterCurrentPower () {
-        for (int i=0; i<this.thrusters.size(); i++) {
-            Thruster t = this.thrusters.get(i);
-            System.out.println(i+": "+t.getCurrentPower());
-        }
-    }*/
 }
 

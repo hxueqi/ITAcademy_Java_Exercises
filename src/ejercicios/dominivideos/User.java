@@ -9,6 +9,7 @@ public class User {
     private long dateRegist;
     private List<Video> videoList = new ArrayList<>();
 
+    //Usuari: esta format per un nom, cognom, password i una data de registre.
     public User (String name, String surname, String password) {
         this.name = name;
         this.surname = surname;

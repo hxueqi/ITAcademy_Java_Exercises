@@ -10,6 +10,7 @@ public class Fase4 {
         rocket1.addThruster(10);
         rocket1.addThruster(5);
 
+        //Set the initial speed and target speed
         Scanner in = new Scanner(System.in);
         System.out.println("Please set the initial speed: ");
         double v0 = in.nextInt();
@@ -19,12 +20,15 @@ public class Fase4 {
 
         int sumMaxPower = 0;
         List<Integer> thrustersMaxPower = rocket1.getThrustersMaxPower();
+
+        //Caculate the total power required,distributed among the rockets
         for(int i = 0; i < thrustersMaxPower.size(); i++){
             sumMaxPower += thrustersMaxPower.get(i);
         }
         if (v<=v0+100*Math.sqrt(sumMaxPower)) {
             int neededPower = (int)(Math.ceil(Math.pow((v-v0)/100.0, 2)));
             System.out.println("needPower: "+neededPower);
+
             int restPower = neededPower;
             List<Integer> thrustersLeftPower = rocket1.getThrustersMaxPower();
             while (restPower>0) {
@@ -43,6 +47,8 @@ public class Fase4 {
                 System.out.println("Thruster "+i+" uses "+(maxPower-leftPower)+" power");
             }
         }
+
+        //If lack of power to reach the target power, display it
         else {
             System.out.print("The rocket does not have enough power to reach the target speed");
         }

@@ -23,7 +23,7 @@ public class Fase3 {
         System.out.println("The amount of thrusters: " + rocket2.getNumThrusters());
         System.out.println("--------");
 
-
+        //Set the target power
         rocket1.setTargetPower(0, 8);
         rocket1.setTargetPower(1, 24);
         rocket1.setTargetPower(2, 12);

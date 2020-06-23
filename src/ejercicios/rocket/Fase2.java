@@ -2,6 +2,7 @@ package ejercicios.rocket;
 
 public class Fase2 {
     public static void main(String[] args){
+        //Add max power to each thruster
         Rocket rocket1 = new Rocket("32WESSDS",3);
         rocket1.addThruster(10);
         rocket1.addThruster(30);
@@ -15,6 +16,7 @@ public class Fase2 {
         rocket2.addThruster(30);
         rocket2.addThruster(10);
 
+        //Display the rocket code, the number of thrusters it has and the maximum power of each thruster.
         System.out.println(rocket1.getCode() + " : " + rocket1.getThrustersMaxPower());
         System.out.println("The amount of thrusters: " + rocket1.getNumThrusters());
         System.out.println("--------");

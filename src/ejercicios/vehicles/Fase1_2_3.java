@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Fase1_2_3 {
     public static void main(String[] args){
+        //Demanar a l’usuari la matrícula del cotxe, la marca i el seu color i crear el cotxe amb les dades anteriors.
         Scanner input = new Scanner(System.in);
         System.out.println("Do you want to create a bike or a car?");
         String typeVehicle = input.nextLine().trim();
@@ -26,9 +27,11 @@ public class Fase1_2_3 {
         System.out.println("What´s color would you like to have?");
         String color = input.nextLine().trim();
 
+       //Afegir-li dues rodes traseres i Afegir-li dues rodes davanteres demanant a l’usuari la marca i el diametre
         boolean isCar = typeVehicle.toLowerCase().equals("car");
         Vehicle vehicle = isCar?new Car(plate, brand, color):new Bike(plate, brand, color);
         List<Wheel> frontWheels = null, backWheels = null;
+
         for (int i=0; i<2; i++) {
             String frontOrBack = i==0?"front":"back";
             List<Wheel> wheels;
